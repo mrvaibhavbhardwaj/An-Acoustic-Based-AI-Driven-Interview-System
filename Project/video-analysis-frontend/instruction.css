@@ -1,0 +1,64 @@
+/* 🌐 General Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* 📦 Instruction Box Styling */
+.instructions-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 🔥 Heading */
+h2 {
+    color: #128C7E;
+    margin-bottom: 15px;
+}
+
+/* 📄 Instruction List */
+ul {
+    text-align: left;
+    font-size: 16px;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* 🔘 Button */
+button {
+    background: #128C7E;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background: #0f6b61;
+}

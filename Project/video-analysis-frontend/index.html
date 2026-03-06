@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Video App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Interview Portal Login</h2>
+
+        <!-- 🔴 CHANGE: Added form wrapper -->
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="📧 Email" required />
+            <input type="password" id="password" placeholder="🔒 Password" required />
+            <!-- 🔴 CHANGE: Button type set to submit -->
+            <button id ="loginBtn" type="submit">Login</button>
+        </form>
+
+        <p id="errorMsg"></p>
+        
+        <p><a href="forget_password.html">Forgot Password?</a></p>
+
+        <!-- ✅ Signup link remains same -->
+        <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+

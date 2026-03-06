@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Submission Result</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      color: #333;
+    }
+    .result-container {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      max-width: 450px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+      color: #128C7E;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    #resultMessage {
+      font-size: 20px;
+      color: #1a5e4d;
+      margin-bottom: 35px;
+      white-space: pre-wrap;
+      font-weight: 600;
+    }
+    button {
+      background-color: #128C7E;
+      border: none;
+      padding: 14px 40px;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #0b665a;
+    }
+    @media (max-width: 500px) {
+      .result-container {
+        width: 90%;
+        padding: 30px 20px;
+      }
+      #resultMessage {
+        font-size: 18px;
+      }
+      button {
+        width: 100%;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h1>Submission Result</h1>
+    <div id="resultMessage">Loading...</div>
+
+    <p style="margin-top: 10px; font-size: 14px;">
+        Developed by Avinash Kumar
+    </p>
+  </div>
+
+
+<script>
+  // Agar dashboard se nahi aaye → index.html
+  if (!sessionStorage.getItem("fromDashboard")) {
+      window.location.replace("index.html");
+  }
+
+  // Display message
+  const message = localStorage.getItem('uploadResultMessage');
+  document.getElementById('resultMessage').textContent = message || "No submission status available.";
+
+  // Replace history to prevent back to dashboard/instruction
+  window.onload = function() {
+      // Clear session flag
+      sessionStorage.removeItem("fromDashboard");
+
+      // History manipulation:
+      // 1. Replace current entry with index.html → history[0] = index.html
+      history.replaceState(null, null, "index.html");
+      // 2. Push result.html as current → history[1] = result.html
+      history.pushState(null, null, "result.html");
+  };
+
+  // Back button → always go to index.html
+  window.addEventListener('popstate', function() {
+      window.location.replace("index.html");
+  });
+
+  // Refresh handling → remove session flag
+  window.addEventListener('beforeunload', function() {
+      sessionStorage.removeItem("fromDashboard");
+  });
+</script>
+
+</body>
+</html>
+

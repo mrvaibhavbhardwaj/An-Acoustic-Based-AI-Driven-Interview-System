@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analysis Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- 🎥 Left side: Video & Controls -->
+    <div class="video-panel">
+        <div class="video-container">
+            <video id="userVideo" autoplay muted></video>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="nextBtn" disabled>Next</button>
+            <button id="submitBtn" disabled>Submit</button>
+        </div>
+
+        <!-- Timer Display -->
+        <div class="timer-display">
+            <span class="status-indicator" id="statusIndicator"></span>
+            Time Remaining: <span id="timerText">--:--</span>
+            <div class="timer-bar-container">
+                <div class="timer-bar" id="timerBar"></div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- 💬 Right side: Chat -->
+    <div class="chat-container">
+        <div class="chat-header">AI Interview Assistant</div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="note">
+                🎧 Note: Please use headphones for best audio clarity during the interview.
+            </div>
+            
+            <!-- Overview panel that shows before starting -->
+            <div id="overviewPanel" class="overview-panel">
+                <div class="overview-title">Interview Overview</div>
+                <div class="overview-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Subjects:</span>
+                        <span class="stat-value" id="overviewTotalSubjects">Loading...</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Questions:</span>
+                        <span class="stat-value" id="overviewTotalQuestions">Loading...</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Duration:</span>
+                        <span class="stat-value" id="overviewTotalTime">Loading...</span>
+                    </div>
+                </div>
+                <div class="subjects-overview" id="subjectsOverview">
+                    <div class="subjects-overview-title">Subjects Details:</div>
+                    <div id="subjectsDetailsList">
+                        <!-- Subjects will be listed here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current subject and questions will be inserted here (hidden initially) -->
+            <div id="currentSubjectContainer" style="display: none;"></div>
+        </div>
+
+        <div class="question-display" id="currentQuestion">
+            Click Start to begin. Questions will continue automatically through all subjects.
+        </div>
+    </div>
+</div>
+
+<!-- Custom Alert Modal -->
+<div id="customAlert">
+    <div class="alert-box">
+        <p id="alertMessage">Message here</p>
+        <button id="alertOkBtn">OK</button>
+    </div>
+</div>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

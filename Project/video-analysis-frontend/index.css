@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin: 0;
+    color: #333;
+}
+
+.login-container input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    width: 90%;
+    margin: 10px auto; /* 🔴 Fix: Center inputs with auto margins */
+    /* 🔴 Fix: Add margin for spacing */
+}
+
+.login-container button {
+    width: 100%;          /* 🔴 Fix: Full width button */
+    display: block;       /* 🔴 Fix: Block element so it aligns properly */
+    margin-top: 10px;     /* 🔴 Add spacing from inputs */
+    padding: 12px;
+    background-color: #128C7E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#loginbtn:disabled {
+    background-color: #999 !important; /* Grey color */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+.login-container button:hover {
+    background-color: #0b665a;
+}
+
+#errorMsg {
+    color: red;
+    font-size: 14px;
+}
+#loginbtn:disabled:hover {
+    background-color: #999 !important;
+}
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%; /* Mobile screens pe auto fit */
+        padding: 20px;
+    }
+}
+
+.login-container input:focus {
+    border-color: #128C7E;
+    box-shadow: 0 0 5px rgba(18, 140, 126, 0.5);
+}
+

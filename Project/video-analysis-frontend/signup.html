@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup Page</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="text" id="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Enter valid 10-digit mobile"/>
+      <input type="email" id="username" placeholder="Enter your email" required />
+
+      
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Password" required minlength="6"/>
+        <span id="togglePassword">👁</span>
+      </div>
+
+      <button id="signupBtn" type="submit">Signup</button>
+    </form>
+
+    <p>Already have an account? <a href="index.html">Login here</a></p>
+    <!-- <p class="forgot-link"><a href="forget_password.html">Forgot Password?</a></p>  ✅ NEW Link -->
+
+    <div id="message"></div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
+
+
