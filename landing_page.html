@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acoustic AI Interview System</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#f0f2f5; color:#333; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: linear-gradient(135deg, #6C63FF, #FF6584);
+      color:#fff;
+      text-align:center;
+      padding:6rem 2rem;
+      position:relative;
+    }
+    .hero h1 { font-size:3rem; margin-bottom:1rem; }
+    .hero p { max-width:700px; margin:0 auto 2rem auto; font-size:1.2rem; }
+    .btn-primary {
+      padding:1rem 2.5rem; font-size:1.1rem;
+      color:#6C63FF; background-color:#fff;
+      border:none; border-radius:10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.4); }
+    .hero img { max-width:200px; margin:2rem auto 0; display:block; }
+
+    /* ===== Features Section ===== */
+    .section { padding:4rem 2rem; max-width:1200px; margin:auto; }
+    .section h2 { font-size:2rem; text-align:center; margin-bottom:2rem; color:#6C63FF; }
+    .feature-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .card {
+      background:#fff; padding:2rem; border-radius:15px; flex:1 1 250px; max-width:300px;
+      text-align:center; transition:transform 0.3s, box-shadow 0.3s; box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+    .card img { width:80px; margin-bottom:1rem; }
+    .card h3 { margin-bottom:1rem; color:#FF6584; font-size:1.3rem; }
+    .card p { font-size:1rem; line-height:1.5; color:#555; }
+
+    /* ===== How It Works Section ===== */
+    .how-it-works { background:#f9f9f9; border-radius:15px; padding:3rem 2rem; margin-bottom:2rem; }
+    .steps { display:flex; flex-wrap:wrap; justify-content:space-around; gap:2rem; }
+    .step { flex:1 1 220px; background:#fff; border-radius:12px; padding:1.5rem; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; }
+    .step:hover { transform:translateY(-5px); }
+    .step img { width:70px; margin-bottom:1rem; }
+    .step h4 { color:#6C63FF; margin-bottom:0.5rem; }
+    .step p { color:#555; font-size:0.95rem; }
+
+    /* ===== Benefits Section ===== */
+    .benefits { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .benefit { background:#fff; border-radius:12px; padding:1.5rem; flex:1 1 250px; max-width:300px; text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s; }
+    .benefit:hover { transform:translateY(-5px); }
+    .benefit img { width:70px; margin-bottom:1rem; }
+    .benefit h4 { color:#FF6584; margin-bottom:0.5rem; }
+    .benefit p { color:#555; font-size:0.95rem; }
+
+    /* ===== Footer ===== */
+    footer { text-align:center; padding:2rem; font-size:0.9rem; color:#888; background-color:#f7f7f7; }
+
+    /* ===== Responsive ===== */
+    @media(max-width:768px) {
+      .hero h1 { font-size:2.2rem; }
+      .feature-cards, .steps, .benefits { flex-direction:column; align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Acoustic-Based AI Interview System</h1>
+    <p>Analyze spoken responses using AI to evaluate tone, pitch, clarity, and emotion. Receive instant feedback on communication skills and confidence to ace your interviews.</p>
+    <!-- Button links to index.html -->
+    <a href="index.html"><button class="btn-primary">Try Demo</button></a>
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/microphone.png" alt="Microphone Icon">
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <h2>Key Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <img src="https://img.icons8.com/color/96/000000/speech-bubble.png" alt="Audio Analysis">
+        <h3>Real-Time Audio Analysis</h3>
+        <p>Capture responses via microphone and analyze pitch, tone, and clarity instantly.</p>
+      </div>
+     <div class="card">
+  <img src="https://img.icons8.com/fluency/96/000000/happy.png" alt="Emotion Detection">
+  <h3>Emotion Detection</h3>
+  <p>AI detects confidence, stress, and enthusiasm to provide meaningful feedback.</p>
+</div>
+      <div class="card">
+        <img src="https://img.icons8.com/color/96/000000/feedback.png" alt="Performance Feedback">
+        <h3>Performance Feedback</h3>
+        <p>Automated scoring and suggestions help candidates improve communication skills.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/color/96/000000/analytics.png" alt="Progress Tracking">
+        <h3>Progress Tracking</h3>
+        <p>Track improvement over sessions and visualize growth in soft skills and confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/100/6C63FF/microphone.png" alt="Step 1">
+        <h4>Step 1: Ask Questions</h4>
+        <p>Display interview questions for the candidate in the web app.</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/100/FF6584/record.png" alt="Step 2">
+        <h4>Step 2: Record Answers</h4>
+        <p>Capture the candidate's voice response via the microphone in real time.</p>
+      </div>
+      <div class="step">
+        <!-- Fixed AI Analysis Image -->
+        <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="Step 3">
+        <h4>Step 3: AI Analysis</h4>
+        <p>Analyze tone, pitch, speed, and emotion using AI models.</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/ios-filled/100/FF6584/feedback.png" alt="Step 4">
+        <h4>Step 4: Feedback</h4>
+        <p>Provide instant scoring, suggestions, and progress tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <img src="https://img.icons8.com/color/96/000000/time-machine.png" alt="Save Time">
+        <h4>Save Time</h4>
+        <p>Automated AI analysis reduces interview preparation and evaluation time.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/color/96/000000/like.png" alt="Improve Skills">
+        <h4>Improve Skills</h4>
+        <p>Get detailed insights to enhance communication and confidence.</p>
+      </div>
+      <div class="benefit">
+        <img src="https://img.icons8.com/color/96/000000/analytics.png" alt="Track Progress">
+        <h4>Track Progress</h4>
+        <p>Monitor growth across multiple mock interviews over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Acoustic AI Interview System. All rights reserved.
+  </footer>
+
+</body>
+</html>
