@@ -78,16 +78,15 @@ This app begins with a secure **Login Page** for authentication.
 ## Dashboard Page
 ![App Screenshot](dashboard_page.png) <!-- You can replace this with your actual screenshot or GIF -->
 
-## Submission Page
-![App Screenshot](submission_page.png)
 
 ---
 
 ## ✨ Created By
 
-> 👨‍💻 Avinash Kumar  
+> 👨‍💻 Vaibhav Bhardwaj 
 > MCA-AIML Student (2024-26)  
-> 🔗 [GitHub Profile](https://github.com/Avinash-prajapat)
+> 🔗 [GitHub Profile](https://github.com/mrvaibhavbhardwaj)
+
 
 
 
